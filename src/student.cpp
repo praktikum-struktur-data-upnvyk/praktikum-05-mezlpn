@@ -92,6 +92,11 @@ bool pop(Stack& s, int& nilai) {
 
 // SOAL 3
 void clear(Stack& s) {
+    while(s.top != nullptr){
+        Node* temp = s.top;
+        s.top = s.top->next;
+        delete temp;
+    }
 }
 
 // SOAL 4
