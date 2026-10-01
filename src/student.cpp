@@ -71,7 +71,11 @@ string display(Stack& s) {
 
 // SOAL 1
 bool push(Stack& s, int nilai) {
-    return false;
+    Node* temp = new Node;
+    temp->data = nilai;
+    temp->next = s.top;
+    s.top = temp;
+    return true;
 }
 
 // SOAL 2
