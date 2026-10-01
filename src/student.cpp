@@ -80,7 +80,14 @@ bool push(Stack& s, int nilai) {
 
 // SOAL 2
 bool pop(Stack& s, int& nilai) {
-    return false;
+    if(s.top == nullptr){
+        return false;
+    }
+    Node* temp = s.top;
+    nilai = temp->data;
+    s.top = temp->next;
+    delete temp;
+    return true;
 }
 
 // SOAL 3
